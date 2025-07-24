@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vorschlag für eine neue Corporate Identity für AI.Group und AI.FUND. Minimalistisch, sophisticated und zukunftsorientiert.">
+    <title>AI.GROUP Ecosystem - Corporate Identity 2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Improvement: CSS Custom Properties (Variablen) für einfache Wartung und Konsistenz */
+        :root {
+            --color-background: #0a0a0b;
+            --color-surface-1: #18181b;
+            --color-surface-2: #27272a;
+            --color-border: #3f3f46;
+            --color-text-primary: #fafafa;
+            --color-text-secondary: #a1a1aa;
+            --color-text-muted: #71717a;
+            --color-accent: #a855f7;
+            --color-accent-dark: #9333ea;
+
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+            --border-radius-lg: 24px;
+            --border-radius-md: 16px;
+            --border-radius-sm: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+            background: var(--color-background);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--color-surface-1), var(--color-surface-2));
+            border-radius: var(--border-radius-lg);
+            border: 1px solid var(--color-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+        }
+
+        .section {
+            background: linear-gradient(135deg, var(--color-surface-1), var(--color-surface-2));
+            margin: 3rem 0;
+            padding: 3rem;
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--color-border);
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+            border-color: #52525b;
+        }
+
+        .section-title {
+            color: var(--color-text-primary);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            font-size: 2.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-showcase, .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .logo-variant {
+            text-align: center;
+            padding: 3rem;
+            background: #0f0f10;
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--color-surface-2);
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+        }
+
+        .color-swatch {
+            height: 120px;
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 1.5rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .color-swatch-label {
+            color: var(--color-text-primary);
+        }
+        .color-swatch-hex {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .primary { background: var(--color-surface-1); }
+        .secondary { background: var(--color-surface-2); }
+        .accent { background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)); }
+        .neutral-light { background: var(--color-text-muted); }
+        .surface { background: var(--color-text-primary); border-color: #e4e4e7; }
+        .surface .color-swatch-label, .surface .color-swatch-hex { color: var(--color-background); }
+
+
+        /* Core Brand Element: The Mark */
+        .brand-mark {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-main);
+            font-weight: 200;
+            font-size: 1.75rem;
+            color: var(--color-text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-mark .dot {
+            width: 7px;
+            height: 7px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            margin: 0 9px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 4px var(--color-accent); }
+            to { box-shadow: 0 0 16px var(--color-accent), 0 0 24px var(--color-accent); }
+        }
+
+        /* Improvement: Using lists for semantic structure */
+        .benefits-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: #0f0f10;
+            padding: 2rem;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--color-surface-2);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-3px);
+        }
+        .benefit-card h3 {
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .h1-sample { font-size: 3rem; font-weight: 200; color: var(--color-text-primary); letter-spacing: -0.03em; margin-bottom: 1rem; }
+        .h2-sample { font-size: 1.75rem; font-weight: 400; color: var(--color-text-secondary); margin-bottom: 1rem; }
+        .body-sample { font-size: 1rem; color: var(--color-text-secondary); /* Improvement: Higher contrast for body text */ }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 style="color: var(--color-text-primary); margin-bottom: 1rem; font-weight: 200; font-size: 3.5rem; letter-spacing: -0.03em;">AI.GROUP Ecosystem</h1>
+            <p style="font-size: 1.25rem; color: var(--color-text-secondary); font-weight: 300;">Ein Rebrand-Vorschlag zur Etablierung als führende europäische AI-Investment-Marke</p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Eine skalierbare Markenarchitektur</h2>
+            <p style="max-width: 800px; margin-bottom: 2rem;">Das Design ist als modulares System konzipiert. Der "Dot" ist das visuelle Anker-Element, das alle Teile der <span class="brand-mark" style="font-size: 1rem; font-weight: 400; white-space: nowrap; vertical-align: middle;">AI<span class="dot" style="width:5px; height:5px; margin: 0 6px; animation: none;"></span>GROUP</span> verbindet. Dies ermöglicht eine kohärente und doch differenzierte Darstellung der einzelnen Geschäftsbereiche.</p>
+            <div class="logo-showcase" style="gap: 1.5rem;">
+                <div class="logo-variant" style="padding: 2rem;">
+                    <div class="brand-mark" style="font-size: 2rem; justify-content: center;">AI<span class="dot"></span>FUND</div>
+                    <p style="color: var(--color-text-muted); margin-top: 1rem;">Der Investment-Arm. Lila symbolisiert Kapital und Innovation.</p>
+                </div>
+                <div class="logo-variant" style="padding: 2rem;">
+                    <div class="brand-mark" style="font-size: 2rem; justify-content: center;">AI<span class="dot" style="background: #3b82f6;"></span>LABS</div>
+                    <p style="color: var(--color-text-muted); margin-top: 1rem;">Forschung & Entwicklung. Blau für Technologie und Tiefe.</p>
+                </div>
+                 <div class="logo-variant" style="padding: 2rem;">
+                    <div class="brand-mark" style="font-size: 2rem; justify-content: center;">AI<span class="dot" style="background: #16a34a;"></span>TALENT</div>
+                    <p style="color: var(--color-text-muted); margin-top: 1rem;">Recruiting & Education. Grün für Wachstum und Menschen.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2 class="section-title">Logo-Konzept: AI.FUND</h2>
+            <div class="logo-showcase">
+                <div class="logo-variant">
+                    <h3 style="color: var(--color-text-secondary); margin-bottom: 1rem;">Primär-Version</h3>
+                    <div class="brand-mark" style="justify-content: center; font-size: 3rem;">
+                        AI<span class="dot" style="width: 8px; height: 8px;"></span>FUND
+                    </div>
+                    <p style="color: var(--color-text-muted); margin-top: 1.5rem;">Minimalistisch, souverän. Der glühende Punkt symbolisiert die "Zündung" der Innovation durch Kapital.</p>
+                </div>
+                <div class="logo-variant">
+                    <h3 style="color: var(--color-text-secondary); margin-bottom: 1rem;">Stacked Version</h3>
+                    <div style="text-align: center; font-family: var(--font-main); font-weight: 200; font-size: 2.5rem; color: var(--color-text-primary); letter-spacing: -0.02em;">
+                        AI<br>
+                        <span style="display:inline-block; width: 8px; height: 8px; background: var(--color-accent); border-radius: 50%; margin: 0.75rem auto; animation: glow 2s ease-in-out infinite alternate;"></span>
+                        <br>FUND
+                    </div>
+                    <p style="color: var(--color-text-muted); margin-top: 1.5rem;">Für quadratische Formate und Social-Media-Avatare.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Sophisticated Color System</h2>
+            <div class="color-palette">
+                <div class="color-swatch primary"><div class="color-swatch-label">Obsidian<div class="color-swatch-hex">#18181B</div></div></div>
+                <div class="color-swatch secondary"><div class="color-swatch-label">Charcoal<div class="color-swatch-hex">#27272A</div></div></div>
+                <div class="color-swatch accent"><div class="color-swatch-label">Innovation Purple<div class="color-swatch-hex">#A855F7</div></div></div>
+                <div class="color-swatch neutral-light"><div class="color-swatch-label">Platinum<div class="color-swatch-hex">#71717A</div></div></div>
+                <div class="color-swatch surface"><div class="color-swatch-label">Surface<div class="color-swatch-hex">#FAFAFA</div></div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Typografie: Inter</h2>
+            <div class="typography-sample">
+                <div class="h1-sample">European AI Leadership</div>
+                <div class="h2-sample">Investment Excellence & Refined Strategy</div>
+                <div class="body-sample">Die Schriftart 'Inter' wurde für digitale Interfaces optimiert. Leichte Schriftschnitte (Light/Extra-Light) für Headlines schaffen eine elegante, moderne Ästhetik. Normale Schriftschnitte (Regular/Medium) garantieren exzellente Lesbarkeit für Fließtexte und vermitteln Seriosität und Klarheit.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Anwendungen</h2>
+            <div class="mockup-grid">
+                <div class="benefit-card" style="padding: 3rem;">
+                    <div class="brand-mark" style="margin-bottom: 2.5rem;">AI<span class="dot"></span>FUND</div>
+                    <p style="color: var(--color-text-primary); font-weight: 500; margin-bottom: 0.5rem;">Dr. Sarah Chen</p>
+                    <p style="color: var(--color-text-secondary);">Managing Partner</p>
+                    <div style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-muted);">
+                        sarah@ai-fund.vc<br>+49 40 8765 4321
+                    </div>
+                </div>
+                <div class="benefit-card" style="background: var(--color-text-primary); color: var(--color-background); padding: 3rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid #e4e4e7;">
+                        <div class="brand-mark" style="color: var(--color-background);">AI<span class="dot"></span>FUND</div>
+                        <p style="color: var(--color-text-muted); font-size: 0.9rem;">Creating European AI Leaders</p>
+                    </div>
+                    <p style="color: #52525b;">Professionelle Korrespondenz mit einer reduzierten, souveränen Ästhetik, die im europäischen Investment-Umfeld Vertrauen und Respekt schafft.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Strategische Vorteile</h2>
+            <ul class="benefits-list">
+                <li class="benefit-card">
+                    <h3>🖤 Premium Sophistication</h3>
+                    <p>Die dunkle, monochrome Farbpalette mit einem einzigen Akzent vermittelt Exklusivität, Fokus und moderne Eleganz.</p>
+                </li>
+                <li class="benefit-card">
+                    <h3>⚡ Minimal Innovation</h3>
+                    <p>Der glühende Punkt ist ein subtiles, aber starkes Signal für Technologie und Innovation, ohne dabei auf abgenutzte Klischees zurückzugreifen.</p>
+                </li>
+                <li class="benefit-card">
+                    <h3>🏛️ Ökosystem-fähig</h3>
+                    <p>Das Design passt perfekt zur Premium-Vision von AI.Hamburg und lässt sich als kohärentes System auf die gesamte AI.Group ausweiten.</p>
+                </li>
+                <li class="benefit-card">
+                    <h3>📱 Future-Proof</h3>
+                    <p>Eine digitale und mobile-first Identität, die durch Vektorgrafiken und variable Schriftarten auf allen Medien perfekt skaliert.</p>
+                </li>
+            </ul>
+        </section>
+
+        <div class="section" style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)); border: none;">
+            <h2 class="section-title" style="color: white;">Das Ergebnis</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95); font-weight: 300;">
+                Eine <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.6rem; border-radius: 6px; font-weight: 400;">radikal minimalistische</span>
+                Corporate Identity, die das AI.Group Ecosystem auf ein internationales Premium-Level hebt und europäische Souveränität mit subtiler Tech-Innovation verbindet.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
